@@ -1,0 +1,140 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f2;
+}
+
+/* Center toàn bộ app */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Khung chính */
+.main {
+  width: 60%;
+  min-height: 400px;
+  background-color: rgb(200, 208, 208);
+  box-shadow: 0 4px 12px rgba(129, 146, 129, 0.6);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+/* Title */
+.main h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.main h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #444;
+}
+
+/* Todo list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+ul li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  background: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Button feature */
+.btn-feature {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-feature button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  background: #4f8a8b;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn-feature button:hover {
+  background: #3b6f70;
+}
+
+/* Feature box */
+.feature-box {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f4f6f6;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.feature-box h3 {
+  margin-top: 0;
+}
+
+/* Input */
+.feature-box input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Button trong feature */
+.feature-box button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2d6cdf;
+  color: white;
+  cursor: pointer;
+}
+
+.feature-box button:hover {
+  background: #1f54b5;
+}
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+li.active {
+  background-color: #eef6ff;
+  border-left: 4px solid #0d6efd;
+}
+
+.todo-desc {
+  margin-top: 6px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #555;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main {
+    width: 90%;
+  }
+}

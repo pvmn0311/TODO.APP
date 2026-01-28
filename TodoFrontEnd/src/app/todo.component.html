@@ -1,0 +1,111 @@
+<div class="container">
+  <div class="main">
+    <h1>TODO APP INTERN SIMPLIFY DALAT</h1>
+    <h2>My Todo List</h2>
+
+    <ul>
+      @for (item of todos; track item.id) {
+        <li
+          (click)="item.id && toggleTodo(item.id)"
+          [class.active]="selectedTodoId === item.id"
+          style="cursor: pointer"
+        >
+
+          <div>
+            {{ item.title }} -
+            <strong>{{ item.isCompleted ? 'Done' : 'Pending' }}</strong>
+          </div>
+
+          <!-- Mô tả -->
+          <div *ngIf="selectedTodoId === item.id" class="todo-desc">
+            {{ item.description || 'Không có mô tả' }}
+          </div>
+        </li>
+
+
+      }
+    </ul>
+
+    <div class="btn-feature">
+      <button (click)="showFeature('add')">Thêm công việc</button>
+
+      <button
+        (click)="showFeature('update')"
+        [disabled]="!selectedTodoId"
+      >
+        Chỉnh sửa công việc
+      </button>
+
+      <button
+        (click)="showFeature('delete')"
+        [disabled]="!selectedTodoId"
+      >
+        Xóa công việc
+      </button>
+    </div>
+
+
+    <!-- Feature box -->
+    <div class="feature-box" *ngIf="currentFeature === 'add'">
+      <h3>Thêm công việc</h3>
+      <input
+        type="text"
+        placeholder="Tên công việc"
+        [(ngModel)]="newTodo.title"
+      />
+      <input
+        type="text"
+        placeholder="Mô tả công việc"
+        [(ngModel)]="newTodo.description"
+      />
+      <select [(ngModel)]="newTodo.isCompleted">
+        <option [ngValue]="false">Chưa xong</option>
+        <option [ngValue]="true">Hoàn thành</option>
+      </select>
+
+      <br /><br />
+      <button (click)="addTodo()">Thêm</button>
+    </div>
+
+    <div class="feature-box" *ngIf="currentFeature === 'update'">
+      <h3>Chỉnh sửa công việc</h3>
+
+      <input
+        type="text"
+        placeholder="Tên công việc"
+        [(ngModel)]="updateTodoModel.title"
+      />
+
+      <input
+        type="text"
+        placeholder="Mô tả công việc"
+        [(ngModel)]="updateTodoModel.description"
+      />
+      <select [(ngModel)]="updateTodoModel.isCompleted">
+        <option [ngValue]="false">Chưa xong</option>
+        <option [ngValue]="true">Hoàn thành</option>
+      </select>
+      <br /><br />
+      <button (click)="updateTodo()">Chỉnh sửa</button>
+    </div>
+
+    <div class="feature-box" *ngIf="currentFeature === 'delete'">
+      <h3>🗑️ Xóa công việc</h3>
+
+      <p>
+        Bạn có chắc muốn xóa công việc:
+        <strong>{{ selectedTodo?.title }}</strong> ?
+      </p>
+
+      <button class="btn-danger" (click)="deleteTodo()">
+        Xác nhận xóa
+      </button>
+
+      <button (click)="currentFeature = null">
+        Hủy
+      </button>
+    </div>
+
+  </div>
+  
+</div>

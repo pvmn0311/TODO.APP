@@ -1,0 +1,12 @@
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\bin\Debug\net8.0\TODO_APP.Domain.deps.json
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\bin\Debug\net8.0\TODO_APP.Domain.dll
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\bin\Debug\net8.0\TODO_APP.Domain.pdb
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.csproj.AssemblyReference.cache
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.AssemblyInfoInputs.cache
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.AssemblyInfo.cs
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.csproj.CoreCompileInputs.cache
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.dll
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\refint\TODO_APP.Domain.dll
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.pdb
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\ref\TODO_APP.Domain.dll
