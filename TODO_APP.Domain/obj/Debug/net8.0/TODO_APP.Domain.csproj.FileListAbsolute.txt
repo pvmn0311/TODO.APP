@@ -10,3 +10,4 @@ C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.dll
 C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\refint\TODO_APP.Domain.dll
 C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.pdb
 C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\ref\TODO_APP.Domain.dll
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Domain\obj\Debug\net8.0\TODO_APP.Domain.sourcelink.json

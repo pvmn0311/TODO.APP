@@ -1,11 +1,15 @@
-/* Reset */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #eef2f2;
+/* Reset cơ bản */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Center toàn bộ app */
+body {
+  margin: 0;
+  background: #eef2f3;
+}
+
+/* Container center màn hình */
 .container {
   display: flex;
   justify-content: center;
@@ -13,128 +17,145 @@ body {
   min-height: 100vh;
 }
 
-/* Khung chính */
+/* Card chính */
 .main {
-  width: 60%;
-  min-height: 400px;
-  background-color: rgb(200, 208, 208);
-  box-shadow: 0 4px 12px rgba(129, 146, 129, 0.6);
-  border-radius: 12px;
+  width: 650px;
+  background: #ffffff;
   padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Title */
+/* Tiêu đề */
 .main h1 {
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  color: #2c3e50;
 }
 
 .main h2 {
   text-align: center;
   margin-bottom: 20px;
   font-weight: normal;
-  color: #444;
+  color: #555;
 }
 
-/* Todo list */
+/* Danh sách todo */
 ul {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
-ul li {
-  padding: 10px 14px;
-  margin-bottom: 8px;
-  background: #ffffff;
-  border-radius: 6px;
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+li {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #f6f8f9;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
 }
 
-/* Button feature */
+li:hover {
+  background: #eef3f6;
+}
+
+/* Todo đang được chọn */
+li.active {
+  border: 1px solid #4caf50;
+  background: #e8f5e9;
+}
+
+/* Mô tả */
+.todo-desc {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+  padding-left: 6px;
+}
+
+/* Nút chức năng */
 .btn-feature {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 
 .btn-feature button {
-  padding: 10px 16px;
-  border: none;
+  padding: 8px 14px;
   border-radius: 6px;
+  border: none;
   cursor: pointer;
-  font-size: 14px;
-  background: #4f8a8b;
+  background: #1976d2;
   color: white;
-  transition: 0.3s;
+  font-size: 14px;
+  transition: 0.2s;
 }
 
 .btn-feature button:hover {
-  background: #3b6f70;
+  background: #1565c0;
 }
 
-/* Feature box */
+.btn-feature button:disabled {
+  background: #b0bec5;
+  cursor: not-allowed;
+}
+
+/* Feature box (Add / Update / Delete) */
 .feature-box {
   margin-top: 25px;
   padding: 20px;
   border-radius: 10px;
-  background: #f4f6f6;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  background: #f9fbfc;
+  border: 1px solid #e0e0e0;
 }
 
+/* Tiêu đề feature */
 .feature-box h3 {
   margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
 }
 
-/* Input */
-.feature-box input {
+/* Input + select */
+.feature-box input,
+.feature-box select {
   width: 100%;
-  padding: 10px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 14px;
 }
 
-/* Button trong feature */
+.feature-box input:focus,
+.feature-box select:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+/* Nút trong feature */
 .feature-box button {
   padding: 8px 14px;
-  border: none;
   border-radius: 6px;
-  background: #2d6cdf;
-  color: white;
+  border: none;
   cursor: pointer;
+  background: #1976d2;
+  color: white;
+  font-size: 14px;
+  margin-right: 8px;
 }
 
 .feature-box button:hover {
-  background: #1f54b5;
-}
-li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-li.active {
-  background-color: #eef6ff;
-  border-left: 4px solid #0d6efd;
+  background: #1565c0;
 }
 
-.todo-desc {
-  margin-top: 6px;
-  padding-left: 10px;
-  font-size: 14px;
-  color: #555;
-}
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+/* Nút danger (delete) */
+.btn-danger {
+  background: #e53935 !important;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .main {
-    width: 90%;
-  }
+.btn-danger:hover {
+  background: #c62828 !important;
 }

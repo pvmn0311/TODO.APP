@@ -17,3 +17,4 @@ C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Infrastructure\obj\Debug\net8.0\refint\TODO_
 C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Infrastructure\obj\Debug\net8.0\TODO_APP.Infrastructure.pdb
 C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Infrastructure\obj\Debug\net8.0\TODO_APP.Infrastructure.genruntimeconfig.cache
 C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Infrastructure\obj\Debug\net8.0\ref\TODO_APP.Infrastructure.dll
+C:\INTERN SIMPLIFY\TODOAPP\TODO_APP.Infrastructure\obj\Debug\net8.0\TODO_APP.Infrastructure.sourcelink.json
