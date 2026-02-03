@@ -3,9 +3,7 @@
     <h1>TODO APP INTERN SIMPLIFY DALAT</h1>
     <h2>My Todo List</h2>
 
-
-
-  <ul>
+    <ul>
       @for (item of todos; track item.id) {
         <li
           (click)="item.id && toggleTodo(item.id)"
@@ -17,27 +15,18 @@
             {{ item.title }} -
             <strong>{{ item.isCompleted ? 'Done' : 'Pending' }}</strong>
           </div>
+
+          <!-- Mô tả -->
           <div *ngIf="selectedTodoId === item.id" class="todo-desc">
             {{ item.description || 'Không có mô tả' }}
           </div>
         </li>
+
+
       }
     </ul>
 
-
     <div class="btn-feature">
-      <!-- <button
-      (click) ="showFeature('detail')"
-      
-      > --> 
-      <button
-        (click)="showFeature('detail'); getTodo()"
-        [disabled]="!selectedTodoId"
-      >
-
-        Chi tiết công việc
-      </button>
-     
       <button (click)="showFeature('add')">Thêm công việc</button>
 
       <button
@@ -53,7 +42,6 @@
       >
         Xóa công việc
       </button>
-      
     </div>
 
 
@@ -102,7 +90,7 @@
     </div>
 
     <div class="feature-box" *ngIf="currentFeature === 'delete'">
-      <h3>Xóa công việc</h3>
+      <h3>🗑️ Xóa công việc</h3>
 
       <p>
         Bạn có chắc muốn xóa công việc:
@@ -117,14 +105,6 @@
         Hủy
       </button>
     </div>
-
-    <div class="feature-box" *ngIf="currentFeature === 'detail' && selectedTodo">
-      <h3> Chi tiết công việc của bạn</h3>
-      <div>Công việc: {{selectedTodo.title}}</div>
-      <div>Mô tả: {{selectedTodo.description}}</div>
-      <div>Thời gian tạo: {{selectedTodo.createdDate}}</div>
-    </div>
-
 
   </div>
   

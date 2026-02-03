@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TodoService } from './services/todo.service';
 import { TodoItems } from './models/todo.models';
-import { title } from 'node:process';
-import { error } from 'node:console';
 
 @Component({
   selector: 'app-todo',
@@ -20,18 +18,18 @@ export class TodoComponent implements OnInit {
   selectedTodoId: number | null = null;
   selectedTodo: TodoItems | null = null;
 
-  currentFeature: 'add' | 'update' | 'delete' | 'detail' | null = null;
+  currentFeature: 'add' | 'update' | 'delete' | null = null;
 
   newTodo = {
     title: '',
     description: '',
-    isCompleted: false,
+    isCompleted: false
   };
 
   updateTodoModel = {
     title: '',
     description: '',
-    isCompleted: false,
+    isCompleted: false
   };
 
   constructor(private todoService: TodoService) {}
@@ -56,7 +54,7 @@ export class TodoComponent implements OnInit {
     }
   }
 
-  showFeature(feature: 'add' | 'update' | 'delete' | 'detail'): void {
+  showFeature(feature: 'add' | 'update' | 'delete'): void {
     this.currentFeature = feature;
 
     if (feature === 'update' && this.selectedTodo) {
@@ -77,7 +75,7 @@ export class TodoComponent implements OnInit {
         this.newTodo = {
           title: '',
           description: '',
-          isCompleted: false,
+          isCompleted: false
         };
       },
       error: err => {
@@ -94,7 +92,7 @@ export class TodoComponent implements OnInit {
       id: this.selectedTodoId,
       title: this.updateTodoModel.title,
       description: this.updateTodoModel.description,
-      isCompleted: this.updateTodoModel.isCompleted,
+      isCompleted: this.updateTodoModel.isCompleted
     }).subscribe({
       next: () => {
         const index = this.todos.findIndex(t => t.id === this.selectedTodoId);
@@ -139,40 +137,7 @@ export class TodoComponent implements OnInit {
       console.error(err);
       alert('Xóa công việc thất bại');
     }
-  })
-  }
-
-  getTodo(): void {
-    if (!this.selectedTodoId) return;
-    this.todoService.getTodo(this.selectedTodoId!).subscribe({
-      next: todo => {
-        this.selectedTodo = todo;
-        this.currentFeature = 'detail';
-        //console.log('selectedTodoId =', this.selectedTodoId);
-        
-      },
-      error: err => {
-        console.error(err);
-        alert('Không lấy được chi tiết công việc');
-        //console.log("loi: ",err)
-      }
-    });
-  }
-  /*
-  getTodos():void {
-    if(!this.selectedTodoId) return;
-    this.todoService.getTodo(this.selectedTodoId!).subscribe({
-      next: todo => {
-        next: todo => {
-          this.selectedTodo = todo;
-          this.currentFeature ='getall';
-        },
-        error: err => {
-          console.error()
-        }
-      }
-    })
-  }*/
+  });
 }
 
-
+}
