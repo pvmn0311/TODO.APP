@@ -30,12 +30,23 @@ namespace TODO_APP.Application.Service
         }
         public async Task AddAsync(TodoItem item)
         {
+            item.CreatedDate = DateTime.UtcNow;
             await _repository.AddAsync(item);
+            
         }
         public async Task UpdateAsync(TodoItem item)
         {
-            await _repository.UpdateAsync(item);
+            var existing = await _repository.GetByIdAsync(item.Id);
+            if (existing == null) return;
+
+            existing.Title = item.Title;
+            existing.Description = item.Description;
+            existing.IsCompleted = item.IsCompleted;
+     
+
+            await _repository.UpdateAsync(existing);
         }
+
         public async Task DeleteAsync(int id)
         {
             await _repository.DeleteAsync(id);
