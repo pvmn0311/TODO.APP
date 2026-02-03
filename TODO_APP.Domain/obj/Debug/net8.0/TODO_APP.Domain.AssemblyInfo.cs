@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TODO_APP.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26b6003751c7e90214e921899f548ee797dc4f56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3623305371be2cc52f85360172663b619478198d")]
 [assembly: System.Reflection.AssemblyProductAttribute("TODO_APP.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TODO_APP.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
