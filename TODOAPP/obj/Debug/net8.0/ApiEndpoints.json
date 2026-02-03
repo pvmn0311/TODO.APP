@@ -1,5 +1,65 @@
 [
   {
+    "ContainingType": "TODO_APP.Api.EndPoint.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0_1",
+    "RelativePath": "account/login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "TODO_APP.Api.EndPoint.AuthEndpoints\u002BLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TODO_APP.Api.EndPoint.AuthEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0_0",
+    "RelativePath": "account/register",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TODO_APP.Api.EndPoint.AuthEndpoints\u002BRegisterRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TODO_APP.Api.EndPoint.TodoEndpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoint\u003Eb__0_5",
+    "RelativePath": "admin/getAllUsers",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "TODO_APP.Api.EndPoint.TodoEndpoint\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_0",
     "RelativePath": "todo/",
@@ -18,7 +78,7 @@
   {
     "ContainingType": "TODO_APP.Api.EndPoint.TodoEndpoint\u002B\u003C\u003Ec",
     "Method": "\u003CMapEndpoint\u003Eb__0_1",
-    "RelativePath": "todo/{id}",
+    "RelativePath": "todo/{id:int}",
     "HttpMethod": "GET",
     "IsController": false,
     "Order": 0,

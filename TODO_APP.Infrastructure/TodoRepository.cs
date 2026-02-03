@@ -38,5 +38,12 @@ namespace TODO_APP.Infrastructure
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task<IEnumerable<TodoItem>> GetTodosByUserIdAsync(int userId)
+        {
+            // Lọc ngay từ Database dựa trên UserId trong Token
+            return await _context.Todos
+                                 .Where(t => t.UserId == userId)
+                                 .ToListAsync();
+        }
     }
 }
